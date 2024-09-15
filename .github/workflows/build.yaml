@@ -4,6 +4,12 @@ jobs:
   greetings_github_action:
     runs-on: ubuntu-latest
     steps:
+    - name: Clone Repo
+      uses: actions/checkout@v4
+    - name: Install Node.js Environment
+      uses: actions/setup-node@v4
+      with:
+        node-version: 22
     - name: hello world
       run: echo "hello world"
     - name: echo main.js
